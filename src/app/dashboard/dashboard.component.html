@@ -1,0 +1,23 @@
+<div class="flex h-screen">
+  <app-sidebar class="w-1/5 bg-teal-600 text-white"></app-sidebar>
+
+  <div class="flex-1 bg-gray-100 p-4 overflow-y-auto">
+    <app-candidate-list (selectCandidate)="openCandidateDetail($event)"></app-candidate-list>
+  </div>
+</div>
+
+
+
+<app-candidate-card
+  *ngFor="let candidate of candidates"
+  [candidate]="candidate"
+  (openDetail)="openCandidateDetail($event)">
+</app-candidate-card>
+
+<!-- Modal -->
+<app-candidate-detail
+  *ngIf="selectedCandidate"
+  [candidate]="selectedCandidate"
+  (close)="closeCandidateDetail()">
+</app-candidate-detail>
+

@@ -1,0 +1,46 @@
+<div class="modal-backdrop">
+  <div class="modal">
+    <button class="close-btn" (click)="closeModal()">×</button>
+
+    <!-- Navegación -->
+    <div class="flex justify-between items-center mb-4">
+      <button (click)="prevSection()" [disabled]="sectionIndex === 0">←</button>
+      <h2 class="text-xl font-bold capitalize">{{ currentSection }}</h2>
+      <button (click)="nextSection()" [disabled]="sectionIndex === sections.length - 1">→</button>
+    </div>
+
+    <!-- Contenido por sección -->
+    <div [ngSwitch]="currentSection" class="section">
+      <div *ngSwitchCase="'email'">
+        <p><strong>Email:</strong> {{ candidate.email }}</p>
+        <!-- Aquí va info adicional del email -->
+      </div>
+      <div *ngSwitchCase="'linkedin'">
+        <p><strong>LinkedIn:</strong> {{ candidate.linkedin }}</p>
+        <!-- Más info -->
+      </div>
+      <div *ngSwitchCase="'instagram'">
+        <p><strong>Instagram:</strong> {{ candidate.instagram }}</p>
+      </div>
+      <div *ngSwitchCase="'manuscript'">
+        <p><strong>Manuscrito:</strong> {{ candidate.manuscriptSummary }}</p>
+      </div>
+      <div *ngSwitchCase="'books'">
+        <p><strong>Libros:</strong></p>
+        <ul>
+          <li *ngFor="let book of candidate.books">{{ book.title }}</li>
+        </ul>
+      </div>
+      <div *ngSwitchCase="'boe'">
+        <p><strong>Presencia Pública:</strong> {{ candidate.boe }}</p>
+      </div>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="dots">
+      <span *ngFor="let s of sections; let i = index"
+            [class.active]="i === sectionIndex"
+            (click)="sectionIndex = i">●</span>
+    </div>
+  </div>
+</div>

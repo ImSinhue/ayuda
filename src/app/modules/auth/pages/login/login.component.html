@@ -1,0 +1,30 @@
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-200 to-white">
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center text-cyan-600">Iniciar sesión</h2>
+    
+    <form (ngSubmit)="login()" #loginForm="ngForm" class="space-y-4">
+      <input
+        class="w-full border border-gray-300 rounded px-4 py-2"
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        placeholder="Usuario"
+        required
+      />
+      <input
+        class="w-full border border-gray-300 rounded px-4 py-2"
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        placeholder="Contraseña"
+        required
+      />
+      <button
+        type="submit"
+        class="w-full bg-cyan-600 text-white py-2 rounded hover:bg-cyan-700 transition"
+      >
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>
