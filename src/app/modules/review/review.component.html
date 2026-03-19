@@ -1,1 +1,18 @@
-<p>review works!</p>
+<div class="min-h-screen bg-gray-100 p-6">
+  <div class="mx-auto max-w-3xl rounded-lg bg-white p-6 shadow">
+    <h1 class="text-2xl font-semibold text-gray-900">Ayuda</h1>
+    <p class="mt-2 text-gray-600">
+      Respuestas rápidas sobre lo que puedo hacer por ti en el flujo de revisión.
+    </p>
+
+    <div class="mt-6 space-y-4">
+      <div
+        *ngFor="let faq of faqs"
+        class="rounded-md border border-gray-200 bg-gray-50 p-4"
+      >
+        <h2 class="text-lg font-semibold text-gray-900">{{ faq.question }}</h2>
+        <p class="mt-2 text-gray-700">{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+</div>
