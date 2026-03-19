@@ -20,6 +20,7 @@ describe('ReviewComponent', () => {
   });
 
   it('renders the capability questions and answers', () => {
+    fixture.detectChanges();
     const textContent = fixture.nativeElement.textContent;
     expect(textContent).toContain('¿De qué eres capaz?');
     expect(textContent).toContain('¿Eres capaz de que te pase un proyecto y lo ejecutes?');
