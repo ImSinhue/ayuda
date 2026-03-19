@@ -18,4 +18,11 @@ describe('ReviewComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('renders the capability questions and answers', () => {
+    const textContent = fixture.nativeElement.textContent;
+    expect(textContent).toContain('¿Qué eres capaz?');
+    expect(textContent).toContain('¿Eres capaz de que te pase un proyecto y lo ejecutes?');
+    expect(textContent).toContain('Sí. Compárteme el repositorio o los archivos clave');
+  });
 });
