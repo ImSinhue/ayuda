@@ -10,7 +10,7 @@ export class ReviewComponent {
     {
       question: '¿De qué eres capaz?',
       answer:
-        'Si te preguntas "¿qué eres capaz?", puedo revisar un proyecto, analizar su estructura y guiarte para ejecutarlo con los comandos adecuados.',
+        'Si te preguntas "¿de qué eres capaz?" (o "¿qué eres capaz?"), puedo revisar un proyecto, analizar su estructura y guiarte para ejecutarlo con los comandos adecuados.',
     },
     {
       question: '¿Eres capaz de que te pase un proyecto y lo ejecutes?',
