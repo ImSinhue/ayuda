@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class ReviewComponent {
   readonly faqs = [
     {
-      question: '¿Qué eres capaz?',
+      question: '¿De qué eres capaz?',
       answer:
-        'Puedo revisar un proyecto, analizar su estructura y guiarte para ejecutarlo con los comandos adecuados.',
+        'Si te preguntas "¿qué eres capaz?", puedo revisar un proyecto, analizar su estructura y guiarte para ejecutarlo con los comandos adecuados.',
     },
     {
       question: '¿Eres capaz de que te pase un proyecto y lo ejecutes?',
